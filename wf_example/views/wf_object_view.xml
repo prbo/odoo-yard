@@ -1,0 +1,106 @@
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="tree_wf_object">
+			<field name="name">WF Object</field>
+			<field name="model">wf.object</field>
+			<field name="priority" eval="1"/>
+			<field name="arch" type="xml">
+			    <tree>
+			        <field name="total_estimate_price"/>
+			        <field name="type_location"/>
+			        <field name="code"/>
+			        <field name="department_id"/>
+			        <field name="requester"/>
+			        <field name="assigned_to"/>
+			        <field name="state"/>
+			    </tree>
+			</field>
+	   	</record>
+        
+     	<record model="ir.ui.view" id="view_wf_object">
+            <field name="name">WF Object</field>
+            <field name="model">wf.object</field>
+            <field name="arch" type="xml">
+                <form string="WF Object Form">
+                    <header>
+                      	<button name="approval7_to_draft" type="workflow"
+                                string="Reset to draft"
+                                states="approval7"/>
+                        <button name="approval1_to_draft" type="workflow"
+                                string="Reset to draft"
+                                states="approval1"/>
+                        <button name="approval2_to_approval1" type="workflow"
+                                string="Reset to dept head"
+                                states="approval2"/>
+                        <button name="budget_to_b4budget" type="workflow"
+                                string="Send back"
+                                states="budget"/>
+                        
+                        <button name="confirm" 
+                                string="Confirm" states="draft"
+                                class="oe_highlight"/>
+                        <button name="approval2" type="workflow"
+                                string="Confirm" states="approval1"
+                                class="oe_highlight"/>
+                        <button name="budget" type="workflow"
+                                string="Confirm" states="approval2,approval7"
+                                class="oe_highlight"/>
+                        <button name="technic" type="workflow"
+                                string="Confirm" states="budget"
+                                class="oe_highlight"/>
+                        <button name="finance" type="workflow"
+                                string="Confirm" states="technic"
+                                class="oe_highlight"/>
+                        <button name="director" type="workflow"
+                                string="Confirm" states="finance"
+                                class="oe_highlight"/>
+                        <button name="president_director" type="workflow"
+                                string="Confirm" states="director"
+                                class="oe_highlight"/>
+                        <button name="done" type="workflow"
+                                string="Done" states="president_director"
+                                class="oe_highlight"/>
+                        
+                        <field name="state" widget="statusbar"
+                            statusbar_visible="draft,budget,finance,done"
+                            />
+                    </header>
+                    <sheet>
+                        <group>
+	                        <field name="total_estimate_price"/>
+					        <field name="type_location"/>
+					        <field name="department_id"/>
+					        <field name="code"/>
+					        <field name="requester"/>
+					        <field name="assigned_to"/>
+				        </group>
+				   	</sheet>
+				   	<div class="oe_chatter">
+	               		<field name="message_follower_ids" widget="mail_followers"/>
+	                  	<field name="message_ids" widget="mail_thread"/>
+	                </div>
+				</form>
+            </field>
+        </record>
+        
+     	<record model="ir.actions.act_window" id="wf_object_action">
+            <field name="name">WF Object</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wf.object</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new Budget Lines.
+              </p><p>
+                A Budget Lines is an set of budget in order to control cost/revenue at a certain point in time.
+              </p>
+            </field>
+        </record>
+        
+     	<menuitem parent="account.menu_finance_entries"
+            id="wf_object_menu"
+            name="WF Object"
+            action="wf_object_action" sequence="911" 
+            groups="account.group_account_user"/>
+  	</data>
+</openerp>

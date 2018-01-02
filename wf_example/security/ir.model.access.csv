@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+wf_example,wf_example.wf_object,model_wf_example_wf_object,,1,0,0,0

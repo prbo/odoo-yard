@@ -1,0 +1,290 @@
+<openerp>
+    <data>
+        <!-- WKF 3 -->
+        <record model="workflow" id="wkf_pp_3">
+            <field name="name">WF object workflow 3</field>
+            <field name="osv">wf.object</field>
+            <field name="on_create">False</field>
+        </record>
+        
+		<!-- activity -->
+        <record model="workflow.activity" id="finance_1">
+            <field name="name">Finance</field>
+            <field name="wkf_id" ref="wkf_pp_3"/>
+			<field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">action_finance()</field>
+        </record>
+        
+        <record model="workflow.activity" id="director">
+            <field name="name">Director</field>
+            <field name="wkf_id" ref="wkf_pp_3"/>
+            <field name="kind">function</field>
+            <field name="action">action_director()</field>
+        </record>
+        
+        <record model="workflow.activity" id="president_director">
+            <field name="name">President Director</field>
+            <field name="wkf_id" ref="wkf_pp_3"/>
+            <field name="kind">function</field>
+            <field name="action">action_president_director()</field>
+        </record>
+        
+        <record model="workflow.activity" id="done_wkf_pp_3">
+            <field name="name">Done</field>
+            <field name="wkf_id" ref="wkf_pp_3"/>
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>
+        </record>
+        
+        <!-- transition -->
+        <record model="workflow.transition" id="session_finance_to_director">
+            <field name="act_from" ref="finance_1"/>
+            <field name="act_to" ref="director"/>
+            <field name="signal">director</field>
+        </record>
+        
+        <record model="workflow.transition" id="session_director_to_president_director">
+            <field name="act_from" ref="director"/>
+            <field name="act_to" ref="president_director"/>
+            <field name="signal">president_director</field>
+        </record>
+        
+        <record model="workflow.transition" id="session_president_director_to_done_wkf_pp_3">
+            <field name="act_from" ref="president_director"/>
+            <field name="act_to" ref="done_wkf_pp_3"/>
+            <field name="signal">done</field>
+        </record>
+        
+        <!-- WKF 2 -->
+        <record model="workflow" id="wkf_pp_2">
+            <field name="name">WF object workflow 2</field>
+            <field name="osv">wf.object</field>
+            <field name="on_create">False</field>
+        </record>
+        
+		<!-- activity -->
+        <record model="workflow.activity" id="budget_2">
+            <field name="name">Budget</field>
+            <field name="wkf_id" ref="wkf_pp_2"/>
+            <field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">action_budget()</field>
+        </record>
+        
+        <record model="workflow.activity" id="technic">
+            <field name="name">Technic</field>
+            <field name="wkf_id" ref="wkf_pp_2"/>
+            <field name="kind">function</field>
+            <field name="action">action_technic()</field>
+        </record>
+        
+        <record model="workflow.activity" id="done_wkf_pp_2">
+            <field name="name">Done</field>
+            <field name="wkf_id" ref="wkf_pp_2"/>
+            <field name="kind">function</field>
+            <field name="action">action_finance()</field>
+        </record>
+        
+        <!-- transition -->
+        <record model="workflow.transition" id="session_budget_to_technic">
+            <field name="act_from" ref="budget_2"/>
+            <field name="act_to" ref="technic"/>
+            <field name="signal">technic</field>
+        </record>
+        
+        <record model="workflow.transition" id="session_technic_to_done_wkf_pp_2">
+            <field name="act_from" ref="technic"/>
+            <field name="act_to" ref="done_wkf_pp_2"/>
+            <field name="signal">finance</field>
+        </record>
+         
+        <!-- WKF 1 -->
+        <record model="workflow" id="wkf_pp_1">
+            <field name="name">WF object workflow 1</field>
+            <field name="osv">wf.object</field>
+            <field name="on_create">False</field>
+        </record>
+        
+		<!-- activity -->
+        <record model="workflow.activity" id="draft_1">
+            <field name="name">Draft</field>
+            <field name="wkf_id" ref="wkf_pp_1"/>
+            <field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">action_draft()</field>
+        </record>
+        
+        <record model="workflow.activity" id="approval1">
+            <field name="name">Dept Head</field>
+            <field name="wkf_id" ref="wkf_pp_1"/>
+            <field name="kind">function</field>
+            <field name="action">action_approval1()</field>
+        </record>
+        
+        <record model="workflow.activity" id="approval2">
+            <field name="name">Div Head</field>
+            <field name="wkf_id" ref="wkf_pp_1"/>
+            <field name="kind">function</field>
+            <field name="action">action_approval2()</field>
+        </record>
+        
+        <record model="workflow.activity" id="approval7">
+            <field name="name">RO Head</field>
+            <field name="wkf_id" ref="wkf_pp_1"/>
+            <field name="kind">function</field>
+            <field name="action">action_approval7()</field>
+        </record>
+        
+        <record model="workflow.activity" id="done_wkf_pp_1">
+            <field name="name">Done</field>
+            <field name="wkf_id" ref="wkf_pp_1"/>
+            <field name="kind">function</field>
+            <field name="action">action_budget()</field>
+        </record>
+         
+        <!-- transition -->
+        <record model="workflow.transition" id="session_draft_to_approval7">
+            <field name="act_from" ref="draft_1"/>
+            <field name="act_to" ref="approval7"/>
+            <field name="signal">confirm</field>
+            <field name="condition">get_code() == 'KOKB'</field>
+        </record>
+        <record model="workflow.transition" id="session_draft_to_approval1">
+            <field name="act_from" ref="draft_1"/>
+            <field name="act_to" ref="approval1"/>
+            <field name="signal">confirm</field>
+            <field name="condition">get_code() == 'KPST'</field>
+        </record>
+        <record model="workflow.transition" id="session_approval7_to_budget">
+            <field name="act_from" ref="approval7"/>
+            <field name="act_to" ref="done_wkf_pp_1"/>
+            <field name="signal">budget</field>
+            <field name="condition">get_code() == 'KOKB'</field>
+        </record>
+        <record model="workflow.transition" id="session_approval1_to_approval2">
+            <field name="act_from" ref="approval1"/>
+            <field name="act_to" ref="approval2"/>
+            <field name="signal">approval2</field>
+            <field name="condition">get_code() == 'KPST' and not (get_total_estimate_price() &lt;= get_price_low())</field>
+        </record>
+        <record model="workflow.transition" id="session_approval1_to_budget">
+            <field name="act_from" ref="approval1"/>
+            <field name="act_to" ref="done_wkf_pp_1"/>
+            <field name="signal">approval2</field>
+            <field name="condition">get_code() == 'KPST' and get_total_estimate_price() &lt;= get_price_low()</field>
+        </record>
+        <record model="workflow.transition" id="session_approval2_to_budget">
+            <field name="act_from" ref="approval2"/>
+            <field name="act_to" ref="done_wkf_pp_1"/>
+            <field name="signal">budget</field>
+            <field name="condition">get_code() == 'KPST'</field>
+        </record>
+		
+		<!-- WKF 0 -->
+        <record model="workflow" id="wkf_pp">
+            <field name="name">WF object workflow</field>
+            <field name="osv">wf.object</field>
+            <field name="on_create">True</field>
+        </record>
+        
+        <!-- activity -->
+        <record model="workflow.activity" id="draft">
+            <field name="name">Draft</field>
+            <field name="wkf_id" ref="wkf_pp"/>
+            <field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">action_draft()</field>
+        </record>
+        
+        <record model="workflow.activity" id="division">
+            <field name="name">Division</field>
+            <field name="wkf_id" ref="wkf_pp"/>
+            <field name="kind">subflow</field>
+            <field name="subflow_id" ref="wkf_pp_1"/>
+        </record>
+        
+        <record model="workflow.activity" id="budget">
+            <field name="name">Budget</field>
+            <field name="wkf_id" ref="wkf_pp"/>
+            <field name="kind">subflow</field>
+            <field name="subflow_id" ref="wkf_pp_2"/>
+        </record>
+        
+        <record model="workflow.activity" id="finance">
+            <field name="name">Finance</field>
+            <field name="wkf_id" ref="wkf_pp"/>
+            <field name="kind">subflow</field>
+            <field name="subflow_id" ref="wkf_pp_3"/>
+        </record>
+        
+        <record model="workflow.activity" id="done_wkf_pp">
+            <field name="name">Done</field>
+            <field name="wkf_id" ref="wkf_pp"/>
+            <field name="flow_stop">True</field>
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>
+        </record>
+        
+        <!-- transition -->
+        <record model="workflow.transition" id="session_draft_to_division">
+            <field name="act_from" ref="draft"/>
+            <field name="act_to" ref="division"/>
+            <field name="signal">draft</field>
+		</record>
+		
+        <record model="workflow.transition" id="session_division_to_budget">
+            <field name="act_from" ref="division"/>
+            <field name="act_to" ref="budget"/>
+            <field name="signal">subflow.done_wkf_pp_1</field>
+		</record>
+        
+        <record model="workflow.transition" id="session_budget_to_finance">
+            <field name="act_from" ref="budget"/>
+            <field name="act_to" ref="finance"/>
+            <field name="signal">subflow.done_wkf_pp_2</field>
+		</record>
+		<record model="workflow.transition" id="session_finance_to_done_wkf_pp">
+            <field name="act_from" ref="finance"/>
+            <field name="act_to" ref="done_wkf_pp"/>
+            <field name="signal">subflow.done_wkf_pp_3</field>
+		</record>
+        
+        <!-- reverse -->
+        <!-- 
+        <record model="workflow.transition" id="session_approval1_to_draft">
+            <field name="act_from" ref="approval1"/>
+            <field name="act_to" ref="draft"/>
+            <field name="signal">approval1_to_draft</field>
+        </record> 
+        <record model="workflow.transition" id="session_approval7_to_draft">
+            <field name="act_from" ref="approval7"/>
+            <field name="act_to" ref="draft"/>
+            <field name="signal">approval7_to_draft</field>
+        </record>
+        <record model="workflow.transition" id="session_approval2_to_approval1">
+            <field name="act_from" ref="approval2"/>
+            <field name="act_to" ref="approval1"/>
+            <field name="signal">approval2_to_approval1</field>
+        </record>
+        <record model="workflow.transition" id="session_budget_to_approval2">
+            <field name="act_from" ref="budget"/>
+            <field name="act_to" ref="approval2"/>
+            <field name="signal">budget_to_b4budget</field>
+            <field name="condition">get_code() == 'KPST' and not (get_total_estimate_price() &lt;= get_price_low())</field>
+        </record>
+        <record model="workflow.transition" id="session_budget_to_approval7">
+            <field name="act_from" ref="budget"/>
+            <field name="act_to" ref="approval7"/>
+            <field name="signal">budget_to_b4budget</field>
+            <field name="condition">get_code() == 'KOKB'</field>
+        </record>
+        <record model="workflow.transition" id="session_budget_to_approval1">
+            <field name="act_from" ref="budget"/>
+            <field name="act_to" ref="approval1"/>
+            <field name="signal">budget_to_b4budget</field>
+            <field name="condition">get_code() == 'KPST' and get_total_estimate_price() &lt;= get_price_low()</field>
+        </record>
+         -->
+    </data>
+</openerp>
