@@ -97,10 +97,11 @@
             </field>
         </record>
         
-     	<menuitem parent="account.menu_finance_entries"
+     	<menuitem parent="hr.menu_hr_main"
             id="wf_object_menu"
             name="WF Object"
             action="wf_object_action" sequence="911" 
-            groups="account.group_account_user"/>
+            groups="base.group_hr_manager,base.group_hr_user"
+     	/>
   	</data>
 </openerp>

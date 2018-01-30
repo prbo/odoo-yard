@@ -1,4 +1,5 @@
 from openerp import models, fields, api, exceptions
+from openerp.exceptions import ValidationError
 
 class wf_object(models.Model):
     _name = 'wf.object'
@@ -50,6 +51,13 @@ class wf_object(models.Model):
     department_id = fields.Many2one('hr.department','Department')
     assigned_to = fields.Many2one('res.users', 'Approver')
     requester = fields.Many2one('res.users', 'Requester')
+    total_estimate_price_times_two = fields.Float('Total Estimated Price Times Two',compute='_compute_times_two')
+    
+    def _compute_times_two(self):
+        self.total_estimate_price_times_two = self.total_estimate_price*2
+    
+    def onchange_state(self):
+        raise ValidationError('Test onchange')
     
 #     signal
     @api.multi
@@ -150,3 +158,20 @@ class wf_object(models.Model):
     @api.multi
     def get_president_director(self):
         return ''
+    
+    def check_duplicate_total_estimate_price(self):
+        wfobject_ids = self.env['wf.object'].search([('total_estimate_price','=',self.total_estimate_price)])
+        #record pertama kali
+        if len(wfobject_ids) == 0:
+            return False
+        #untuk dirinya sendiri
+        if len(wfobject_ids) == 1:
+            if wfobject_ids[0].id == self.id:
+                return False
+        #jika kedua kondisi tidak masuk berarti ada yang sama
+        return True
+    
+    @api.onchange('total_estimate_price')
+    def _onchange_total_estimate_price(self):
+        if self.check_duplicate_total_estimate_price():
+            raise ValidationError('Already have')
