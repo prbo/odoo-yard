@@ -6,4 +6,4 @@ An example module to add workflow to a model or object, implementing sub workflo
 
 # website_support_indonesia
 An example of inherit, adding functional to existing module, module Website Support from OCA (https://www.odoo.com/apps/modules/9.0/website_support/) is used as existing module.
-Additional functional consist of adding SLA, PIC schedule and email notification, and category ticket.
+Additional functional consist of adding SLA, PIC schedule and email notification, and category of ticket.
