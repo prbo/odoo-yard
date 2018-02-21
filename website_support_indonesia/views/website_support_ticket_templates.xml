@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="support_submit_ticket" name="Submit Support Ticket" page="True">
+		    <t t-call="website.layout">
+		      	<div id="wrap" class="oe_structure oe_empty">
+		      	<section>
+		        	<div class="container text-center">
+		          		<div class="row">
+		            		<div class="col-md-12">
+		              			<h1>Submit Quick Response</h1>
+		            		</div>
+		        		</div>
+		        		<div class="row">
+		        		    <div class="col-md-3">
+		        		   	</div>
+		        		    <div class="col-md-6">
+		        		    	<h4>Selamat datang di HR Quick Response, kami akan melayani pertanyaan seputar HR yang membutuhkan respon cepat.<br/> 
+		        		    	Staff kami yang bertugas hari ini : </h4><br/>
+		        			</div>
+		        			<div class="col-md-3">
+		        		   	</div>
+		        		</div>
+		        		<t t-if="pic.image != False">
+		        		<div class="row">
+		        		    <div class="col-md-12">		    
+		        		    	<img itemprop="image" class="img img-responsive" style="display: inline-block;" width="200"
+	             						t-att-src="'data:image/png;base64,' + pic.image"/>
+			       			</div>
+			       		</div>
+			       		<div class="row">
+			       		    <div class="col-md-12">
+		        				<b><t t-esc="pic.name"/></b><br/>
+		        			</div>
+		        		</div>
+		        		</t>
+		        		<div class="row">
+		        		    <div class="col-md-3">
+		        		   	</div>
+		        		    <div class="col-md-6">
+		        		    	<h4>Untuk memulai silahkan mengisi form di bawah ini.</h4>
+		        			</div>
+		        			<div class="col-md-3">
+		        		   	</div>
+		        		</div>
+		        	</div>
+		      	</section>
+		    	<form action="/support/ticket/process" method="POST" class="form-horizontal mt32" enctype="multipart/form-data">
+		            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+			    <input style="display:none;" name="my_gold" value="256"/>
+		            <div t-attf-class="form-group #{error and 'person_name' in error and 'has-error' or ''}">
+		                <label class="col-md-3 col-sm-4 control-label" for="person_name">Nama</label>
+		                <div class="col-md-7 col-sm-8">
+		                    <input type="text" class="form-control" name="person_name" required="True" t-attf-value="#{person_name or ''}"/>
+		                </div>
+		            </div>
+		            <div name="email_from_container" t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+		                <label class="col-md-3 col-sm-4 control-label" for="email">Email</label>
+		                <div class="col-md-7 col-sm-8">
+		                    <input type="email" class="form-control" name="email" required="True" t-attf-value="#{email or ''}" t-attf-readonly="#{email and 'readonly'}"/>
+		                </div>
+		            </div>
+		            <div t-attf-class="form-group #{error and 'category' in error and 'has-error' or ''}">
+		                <label class="col-md-3 col-sm-4 control-label" for="name">Kategori</label>
+		                <div class="col-md-7 col-sm-8">
+		                    <select class="form-control" name="category">
+		                        <t t-foreach="categories" t-as="category">
+				                <option t-attf-value="#{category.id}"><t t-esc="category.complete_name"/></option>
+		                        </t>
+		                    </select>
+		                </div>
+		            </div>
+		            <div name="subject_container" t-attf-class="form-group #{error and 'subject' in error and 'has-error' or ''}">
+			        <label class="col-md-3 col-sm-4 control-label" for="subject">Subjek</label>
+			        <div class="col-md-7 col-sm-8">
+			            <input type="subject" class="form-control" name="subject" required="True"/>
+			        </div>
+		            </div>
+		            <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+		                <label class="col-md-3 col-sm-4 control-label" for="description">Deskripsi</label>
+		                <div class="col-md-7 col-sm-8">
+		                    <textarea  class="form-control" name="description" style="min-height: 120px" required="True"></textarea>
+		                </div>
+		            </div>
+		            <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+		                <label class="col-md-3 col-sm-4 control-label" for="file">Tambah Dokumen</label>
+			        	<div class="col-md-7 col-sm-8">
+		                    <div class="btn btn-default btn-file col-md-12"><input name="file" type="file" /></div>
+		                </div>
+		            </div>
+		
+		            <div class="form-group">
+		                <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+		                    <button class="btn btn-primary btn-lg">Submit Ticket</button>
+		                </div>
+		            </div>
+		        </form>
+		      </div>
+		    </t>
+		</template>
+
+	</data>
+</openerp>

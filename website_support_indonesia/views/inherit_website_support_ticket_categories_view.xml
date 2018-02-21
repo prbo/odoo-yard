@@ -1,0 +1,122 @@
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="inherit_website_support_ticket_categories_view_form">
+             <field name="name">Text Field For Parent Category</field>
+             <field name="model">website.support.ticket.categories</field>
+             <field name="inherit_id" ref="website_support.website_support_ticket_categories_view_form"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="after">
+                      <field name="parent_id"></field>
+                      <field name="complete_name"></field>
+                      <field name="type_view"></field>
+                      <field name="sla"></field>
+                 </xpath>
+             </field>
+         </record>
+         <record model="ir.ui.view" id="inherit_website_support_ticket_categories_view_tree">
+             <field name="name">Text Field For Parent Category</field>
+             <field name="model">website.support.ticket.categories</field>
+             <field name="inherit_id" ref="website_support.website_support_ticket_categories_view_tree"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="replace">
+                      <field name="complete_name"></field>
+                 </xpath>
+             </field>
+         </record>
+         <template id="inherit_support_ticket_view_list" inherit_id="website_support.support_ticket_view_list">
+             <xpath expr="//t[@t-esc='support_ticket.category.name']" position="replace">
+                 <t t-esc="support_ticket.category.complete_name"/>
+             </xpath>
+         </template>
+         <template id="inherit_support_ticket_view" inherit_id="website_support.support_ticket_view">
+             <xpath expr="//t[@t-esc='support_ticket.category.name']" position="replace">
+                 <t t-esc="support_ticket.category.complete_name"/>
+             </xpath>
+         </template>
+         <template id="inherit_support_help_pages" inherit_id="website_support.support_help_pages">
+             <xpath expr="//div[@class='pull-right']" position="replace">
+                 <div class="pull-right">
+                  	<a href="/support/ticket/inherit_submit">Submit Tiket Quick Response</a>
+                    <t t-if="request.env.user.partner_id.name != 'Public user'">
+                        | <a href="/support/ticket/view">Daftar Tiket Quick Response Saya</a>
+                    </t>
+                </div>
+             </xpath>
+         </template>
+         <record model="ir.ui.view" id="inherit_website_support_ticket_view_tree">
+             <field name="name">Overdue Date</field>
+             <field name="model">website.support.ticket</field>
+             <field name="inherit_id" ref="website_support.website_support_ticket_view_tree"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='subject']" position="after">
+                 	<field name="create_date"></field>
+                  	<field name="overdue_date"></field>
+                 </xpath>
+             </field>
+         </record>
+         
+        <record id="website_support.website_support_ticket_categories_view_tree" model="ir.ui.view">
+          	<field name="name">Support Ticket Categories</field>
+          	<field name="model">website.support.ticket.categories</field>
+          	<field name="arch" type="xml">
+      	      	<tree>
+      	          	<field name="name"/>
+      	      	</tree>
+      	  	</field>
+      	</record>
+      	
+        <record id="website_support.website_support_ticket_categories_action" model="ir.actions.act_window">
+          	<field name="name">Support Ticket Categories</field>
+      	  	<field name="res_model">website.support.ticket.categories</field>
+      	  	<field name="view_type">form</field>
+      	  	<field name="view_mode">tree,form</field>
+      	  	<field name="help" type="html">
+	      		<p class="oe_view_nocontent_create">Create new categories</p>
+	  		</field>
+      	</record>
+      	
+        <record id="website_support.website_support_ticket_states_view_tree" model="ir.ui.view">
+          	<field name="name">Support Ticket States</field>
+          	<field name="model">website.support.ticket.states</field>
+          	<field name="arch" type="xml">
+      	      	<tree>
+      	          	<field name="name"/>
+      	      	</tree>
+      	  	</field>
+      	</record>
+
+      	<record id="website_support.website_support_ticket_states_action" model="ir.actions.act_window">
+          	<field name="name">Support Ticket States</field>
+      	  	<field name="res_model">website.support.ticket.states</field>
+      	  	<field name="view_type">form</field>
+      	  	<field name="view_mode">tree,form</field>
+      	  	<field name="help" type="html">
+	      		<p class="oe_view_nocontent_create">Create support ticket state</p>
+	  		</field>
+      	</record>
+      	
+      	<record id="website_support.website_support_help_groups_view_tree" model="ir.ui.view">
+          	<field name="name">Support Ticket Help Pages</field>
+          	<field name="model">website.support.help.groups</field>
+          	<field name="arch" type="xml">
+      	      	<tree>
+      	          	<field name="name"/>
+      	          	<field name="page_count"/>
+      	      	</tree>
+      	  	</field>
+      	</record>
+
+      	<record id="website_support.website_support_help_groups_action" model="ir.actions.act_window">
+          	<field name="name">Support Ticket Help Pages</field>
+      	  	<field name="res_model">website.support.help.groups</field>
+      	  	<field name="view_type">form</field>
+      	  	<field name="view_mode">tree,form</field>
+      	  	<field name="help" type="html">
+	      		<p class="oe_view_nocontent_create">Create a help page group</p>
+	  		</field>
+      	</record>
+    	   
+       	<menuitem id="website_support.website_support_parent_menu" name="Quick Response" parent="hr.menu_hr_root" sequence="90"/>
+       	<menuitem id="website_support.website_support_config_parent_menu" name="Quick Response" parent="hr.menu_human_resources_configuration" sequence="80"/>
+    </data>
+</openerp>

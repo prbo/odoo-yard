@@ -1,0 +1,820 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_support
+# SHProgrammer <probo.sukmohadi@palmagroup.co.id>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160712\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-23 08:30+0000\n"
+"PO-Revision-Date: 2017-02-23 16:34+0700\n"
+"Last-Translator: SHProgrammer <probo.sukmohadi@palmagroup.co.id>\n"
+"Language-Team: Palma Group Team\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "1 Star"
+msgstr "1 Bintang"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "2 Star"
+msgstr "2 Bintang"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "3 Star"
+msgstr "3 Bintang"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "4 Star"
+msgstr "4 Bintang"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "5 Star"
+msgstr "5 Bintang"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_needaction
+msgid "Action Needed"
+msgstr "Tindakan Diperlukan"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Add Attachment"
+msgstr "Tambahkan Attachment"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment_filename
+msgid "Attachment Filename"
+msgstr "Nama File Attachment"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment
+msgid "Attachments"
+msgstr "Attachments"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Cancel"
+msgstr "Batal"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_categories_menu
+msgid "Categories"
+msgstr "Kategori-kategori"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_category
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Category"
+msgstr "Kategori"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_name
+msgid "Category Name"
+msgstr "Nama Kategori"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_users_cat_user_ids
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_cat_user_ids
+msgid "Category Users"
+msgstr "Pengguna Kategori"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Close Ticket"
+msgstr "Close Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_color
+msgid "Color"
+msgstr "Warna"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_company
+msgid "Companies"
+msgstr "Perusahaan-perusahaan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_company_id
+msgid "Company"
+msgstr "Perusahaan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_content
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_content
+msgid "Content"
+msgstr "Isi"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_conversation_history
+msgid "Conversation History (Depreciated)"
+msgstr "History Percakapan"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Create Date"
+msgstr "Tanggal Dibuat"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_help_groups_action
+msgid "Create a help page group"
+msgstr "Buat Grup Halaman Bantuan"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_categories_action
+msgid "Create new categories"
+msgstr "Buat Kategori Baru"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_states_action
+msgid "Create support ticket state"
+msgstr "Buat Status Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_parent_menu
+msgid "Customer Support"
+msgstr "Quick Response"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Tanggal dari pesan terbaru yang dipost pada record."
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_description
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Description"
+msgstr "Deskripsi"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_display_name
+msgid "Display Name"
+msgstr "Nama Display"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_email
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_email
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Email"
+msgstr "Email"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_customer_closed
+msgid "Employee Closed"
+msgstr "Karyawan Close Tiket"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_customer_replied
+msgid "Employee Replied"
+msgstr "Karyawan Membalas Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_ids
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "Feedback"
+msgstr "Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_average
+msgid "Feedback Average Rating"
+msgstr "Rata-rata Rating Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_count
+msgid "Feedback Count"
+msgstr "Jumlah Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_rating
+msgid "Feedback Rating"
+msgstr "Rating Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_text
+msgid "Feedback Text"
+msgstr "Teks Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_follower_ids
+msgid "Followers"
+msgstr "Pengikut"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Pengikut (Channels)"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pengikut (Partners)"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "From"
+msgstr "Dari"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_group_id
+msgid "Group"
+msgstr "Grup"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:46
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_name
+#, python-format
+msgid "Help Group"
+msgstr "Grup Bantuan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_hp_id
+msgid "Help Page"
+msgstr "Halaman Bantuan"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_help_groups_menu
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Help Pages"
+msgstr "Halaman halaman Bantuan"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.high
+msgid "High"
+msgstr "Tinggi"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id_10394
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Jika dichecklist, pesan baru ini memerlukan perhatian."
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jika dichecklist, pesan baru ini memerlukan perhatian."
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_unattended
+msgid "In 'Open' state or 'Customer Replied' state taken into consideration name changes"
+msgstr ""
+"In 'Open' state or 'Customer Replied' state taken into consideration name "
+"changes"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_is_follower
+msgid "Is Follower"
+msgstr "Adalah Pengikut"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_last_post
+msgid "Last Message Date"
+msgstr "Tanggal Pesan Terakhir"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states___last_update
+msgid "Last Modified on"
+msgstr "Terakhir Diubah Pada"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_uid
+msgid "Last Updated by"
+msgstr "Terakhir Diubah oleh"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diubah pada"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.low
+msgid "Low"
+msgstr "Rendah"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_template_id
+msgid "Mail Template"
+msgstr "Template Pesan"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "Message"
+msgstr "Pesan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_body
+msgid "Message Body"
+msgstr "Isi Pesan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_ids
+msgid "Messages"
+msgstr "Pesan-pesan"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.moderately
+msgid "Moderately"
+msgstr "Moderate"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "My Support Tickets"
+msgstr "Tiket Quick Response Saya"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "My Tickets"
+msgstr "Tiket Saya"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Name"
+msgstr "Nama"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:45
+#: model:ir.ui.view,arch_db:website_support.content_new_helppage
+#, python-format
+msgid "New Help Group"
+msgstr "Grup Bantuan Baru"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:16
+#: model:ir.ui.view,arch_db:website_support.content_new_helppage
+#, python-format
+msgid "New Help Page"
+msgstr "Halaman Bantuan Baru"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category
+msgid "New Support Ticket for your category"
+msgstr "Tiket Quick Response Baru untuk Kategori Anda"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_new_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_new_support_ticket_count
+msgid "New Ticket Count"
+msgstr "Jumlah Tiket Baru"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_company_next_support_ticket_number
+msgid "Next Support Ticket Number"
+msgstr "Nomor Tiket Quick Response Berikutnya"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action_partner
+msgid "No Support Tickets found"
+msgstr "Tidak Ditemukan Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_priority_action
+msgid "No Support Tickets priorities found"
+msgstr "Tidak Ditemukan Prioritas Tiket Quick Response"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.normal
+msgid "Normal"
+msgstr "Normal"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Jumlah dari Tindakan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_count
+msgid "Number of Pages"
+msgstr "Jumlah dari Halaman"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Jumlah pesan yang memerlukan tindakan"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Jumlah pesan yang belum dibaca"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_open
+msgid "Open"
+msgstr "Open"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_name
+msgid "Page Name"
+msgstr "Nama Halaman"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url
+msgid "Page URL"
+msgstr "URL Halaman"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_ids
+msgid "Pages"
+msgstr "Halaman-halaman"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_partner
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_partner_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_person_name
+msgid "Person Name"
+msgstr "Nama Karyawan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_portal_access_key
+msgid "Portal Access Key"
+msgstr "Kunci Akses Portal"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_priority_menu
+msgid "Priorities"
+msgstr "Prioritas"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id
+msgid "Priority"
+msgstr "Prioritas"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_name
+msgid "Priority Name"
+msgstr "Nama Prioritas"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "Rating"
+msgstr "Rating"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Reply"
+msgstr "Balas"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Search"
+msgstr "Cari"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Send"
+msgstr "Kirim"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_sequence
+msgid "Sequence"
+msgstr "Urutan"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_staff_closed
+msgid "Staff Closed"
+msgstr "HR Staff Close Tiket"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_staff_replied
+msgid "Staff Replied"
+msgstr "HR Staff Membalas"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_state
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "State"
+msgstr "Status"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_name
+msgid "State Name"
+msgstr "Nama Status"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_states_menu
+msgid "States"
+msgstr "Status-status"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_subject
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subject
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Subject"
+msgstr "Subjek"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "Submit"
+msgstr "Submit"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "Submit Feedback"
+msgstr "Submit Feedback"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Submit Support Ticket"
+msgstr "Submit Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Submit Ticket"
+msgstr "Submit Tiket"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Submit a Ticket"
+msgstr "Submit sebuah Tiket"
+
+#. module: website_support
+#: model:website.menu,name:website_support.website_support_ticket
+msgid "Support"
+msgstr "Dukungan"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_string
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_string
+msgid "Support Ticket String"
+msgstr "String Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action_partner
+#: model:ir.ui.menu,name:website_support.website_support_ticket_menu
+#: model:ir.ui.view,arch_db:website_support.view_partner_form_inherit_website_module
+msgid "Support Tickets"
+msgstr "Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_compose_action
+msgid "Support Tickets Compose"
+msgstr "Buat Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_config_parent_menu
+msgid "Support Tickets Configuration"
+msgstr "Konfigurasi Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_priority_action
+msgid "Support Tickets Priorities"
+msgstr "Prioritas-prioritas Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_thank_you
+msgid "Thank You"
+msgstr "Terima Kasih"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_color
+msgid "Ticket Color"
+msgstr "Warna Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_count
+msgid "Ticket Count"
+msgstr "Jumlah Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_ticket_id
+msgid "Ticket ID"
+msgstr "Tiket ID"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_number
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_tree
+msgid "Ticket Number"
+msgstr "Nomor Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_number_display
+msgid "Ticket Number Display"
+msgstr "Display Jumlah Tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_ids
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_ids
+msgid "Tickets"
+msgstr "Tiket-tiket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url_generated
+msgid "URL"
+msgstr "URL"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_unattended
+msgid "Unattended"
+msgstr "Belum di follow up"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "Unattended Tickets"
+msgstr "Tiket belum di follow up"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_unread
+msgid "Unread Messages"
+msgstr "Pesan Belum Dibaca"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Penghitung Pesan Belum Dibaca"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.urgent
+msgid "Urgent"
+msgstr "Urgent"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_users
+msgid "Users"
+msgstr "Pengguna-pengguna"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_thank_you
+msgid "We will get back to you shortly"
+msgstr "Kami akan melakukan follow up segera"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_website_message_ids
+msgid "Website Messages"
+msgstr "Pesan-pesan Website"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.view_users_form_inherit_website_support
+msgid "Website Support"
+msgstr "Dukungan Website"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket
+msgid "Website Support Ticket"
+msgstr "Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_website_message_ids
+msgid "Website communication history"
+msgstr "History Komunikasi Website"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "You have no support tickets"
+msgstr "Anda belum memiliki tiket quick response"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_closed
+msgid "Your support ticket has been closed"
+msgstr "Tiket quick response anda telah di close"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category_change
+msgid "Your support ticket has been updated"
+msgstr "Tiket quick response anda telah diupdate"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_groups
+msgid "website.support.help.groups"
+msgstr "Grup Bantuan Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_help_groups_action
+msgid "website.support.help.groups.action"
+msgstr "Tindakan Grup Bantuan Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page
+msgid "website.support.help.page"
+msgstr "Halaman Bantuan Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page_feedback
+msgid "website.support.help.page.feedback"
+msgstr "Feedback Halaman Bantuan Tiket Quick Response"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_categories
+msgid "website.support.ticket.categories"
+msgstr "Kategori Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_categories_action
+msgid "website.support.ticket.categories.action"
+msgstr "Tindakan Kategori Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_compose
+msgid "website.support.ticket.compose"
+msgstr "Buat Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_message
+msgid "website.support.ticket.message"
+msgstr "Pesan Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_priority
+msgid "website.support.ticket.priority"
+msgstr "Prioritas Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_states
+msgid "website.support.ticket.states"
+msgstr "Status Tiket Quick Response Website"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_states_action
+msgid "website.support.ticket.states.action"
+msgstr "Tindakan Status Tiket Quick Response"

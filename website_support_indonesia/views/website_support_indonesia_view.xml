@@ -1,0 +1,48 @@
+<openerp>
+  	<data>
+    	<record id="schedule_person_in_charge_view_form" model="ir.ui.view">
+            <field name="name">Schedule Person In Charge</field>
+            <field name="model">schedule.person.in.charge</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!-- HR or Estate responsibility? -->
+                    </header>
+                    <sheet>
+                        <group>
+	                        <field name="pic"/>
+	                        <field name="start_date"/>
+	                        <field name="end_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+       	</record>
+       	
+        <record id="schedule_person_in_charge_view_tree" model="ir.ui.view">
+            <field name="name">Schedule Person In Charge</field>
+            <field name="model">schedule.person.in.charge</field>
+			<field name="arch" type="xml">
+	      	  	<tree>
+	      	      	<field name="pic">Person In Charge</field>
+					<field name="start_date">Start Date</field>
+					<field name="end_date">End Date</field>
+	      		</tree>
+      		</field>
+        </record>
+        
+      	<record id="schedule_person_in_charge_action" model="ir.actions.act_window">
+          	<field name="name">Schedule Person In Charge</field>
+	  		<field name="res_model">schedule.person.in.charge</field>
+	  		<field name="view_mode">tree,form</field>
+	  		<field name="help" type="html">
+		      	<p>
+		          	No Schedule Person In Charge found
+		      	</p>
+	      	</field>
+      	</record>
+        
+    	<menuitem id="website_support_indonesia_schedule_person_in_charge_menu" name="Schedule Person In Charge" parent="website_support.website_support_config_parent_menu" action="schedule_person_in_charge_action" sequence="20"/>
+  	</data>
+</openerp>
